@@ -19,18 +19,20 @@
 
   <body>
     <header class="navbar navbar-expand-md">
-      <a class="navbar-brand" href="https://www.google.ca/"><img src="./images/empowerabilitylabslogo.png" alt="logo" width="140" /></a>
-      <nav>
-        <div role="tablist" aria-labelledby="tablist-1" class="automatic manual">
-          <button id="home" type="button" role="tab" aria-selected="false" aria-controls="tabpanel-1" tabindex="-1">
-            <span class="focus">Home</span>
-          </button>
-          <button id="service" type="button" role="tab" aria-selected="false" aria-controls="tabpanel-2" tabindex="-1">
-            <span class="focus">Services</span>
-          </button>
-          <button id="schedule" type="button" role="tab" aria-selected="false" aria-controls="tabpanel-3" tabindex="-1">
-            <span class="focus">Schedule a call</span>
-          </button>
+      <!-- Description to alt text since it is the only website text-->
+      <a class="navbar-brand" href="https://www.google.ca/"><img src="./images/empowerabilitylabslogo.png" alt="Empower Ability Labs Logo" width="120" /></a>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <div role="tablist" aria-labelledby="tablist-1" class="automatic manual">
+            <button id="home" type="button" role="tab" aria-selected="true" aria-controls="tabpanel-1" tabindex="0">
+              <span class="focus">Home</span>
+            </button>
+            <button id="service" type="button" role="tab" aria-selected="false" aria-controls="tabpanel-2" tabindex="-1">
+              <span class="focus">Services</span>
+            </button>
+            <button id="schedule" type="button" role="tab" aria-selected="false" aria-controls="tabpanel-3" tabindex="-1">
+              <span class="focus">Schedule a call</span>
+            </button>
+          </div>
         </div>
     </header>
     <main>
@@ -38,7 +40,7 @@
       <div class="jumbotron">
         <div class="container">
           <!-- Correct aria-labelledby to match the tab button id -->
-          <section id="tabpanel-1" role="tabpanel" aria-labelledby="home" class="is-hidden">
+          <section id="tabpanel-1" role="tabpanel" aria-labelledby="home" aria-hidden="false">
             <!-- Removed H2 class -->
             <h1>Welcome to Empower Ability Labs!</h1>
             <p>
@@ -82,7 +84,7 @@
             </div>
           </section>
           <!-- Correct aria-labelledby to match the tab button id -->
-          <div id="tabpanel-2" role="tabpanel" aria-labelledby="service" class="is-hidden">
+          <section id="tabpanel-2" role="tabpanel" aria-labelledby="service" aria-hidden="true">
             <div class="row">
               <h1>Services content architecture</h1>
               <div class="col-10">
@@ -117,9 +119,9 @@
                 expertise ranging from novice to expert, our community can support your product lifecycle from user research, to design, to QA.
               </p>
             </div>
-          </div>
+          </section>
           <!-- Correct aria-labelledby to match the tab button id -->
-          <div id="tabpanel-3" role="tabpanel" aria-labelledby="schedule" class="is-hidden">
+          <section id="tabpanel-3" role="tabpanel" aria-labelledby="schedule" aria-hidden="true">
             <h1>Schedule a call content architecture</h1>
             <div class="row">
               <div class="col-10">
@@ -184,10 +186,10 @@
     </footer>
 
     <div id="dialog_layer" class="dialogs">
-      <div role="dialog" id="dialog1" aria-labelledby="dialog1_label" aria-modal="true" class="hidden">
+      <div role="dialog" id="dialog1" aria-labelledby="dialog1_label" aria-modal="true" class="hidden" aria-describedby="dialogOneDescription">
         <h2 id="dialog1_label" class="dialog_label">Community Steering Committee</h2>
         <div class="row">
-          <p>
+          <p id="dialogOneDescription">
             We get an aha! moments from product managers who try our services for the first time. We offered many lab days, workshops and offered usability testing services to many companies and
             organizations including:
           </p>
